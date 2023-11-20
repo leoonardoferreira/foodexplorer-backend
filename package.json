@@ -1,0 +1,37 @@
+{
+  "name": "backend-foodexplorer",
+  "version": "1.0.0",
+  "description": "",
+  "type": "module",
+  "main": "index.js",
+  "engines": {
+    "node": "=18.17.1"
+  },
+  "scripts": {
+    "start": "pm2-runtime start ecosystem.config.cjs --env production",
+    "dev": "nodemon ./src/server.js",
+    "migrate": "knex migrate:latest",
+    "test": "test",
+    "lint": "eslint src --ext .js --fix"
+  },
+  "author": "Gabriel Santos",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "express-async-errors": "^3.1.1",
+    "jsonwebtoken": "^9.0.1",
+    "knex": "^2.5.1",
+    "npm-check": "^6.0.1",
+    "pm2": "^5.3.0",
+    "sqlite": "^5.0.1",
+    "sqlite3": "^5.1.6"
+  },
+  "devDependencies": {
+    "@rocketseat/eslint-config": "^2.1.0",
+    "eslint": "^8.46.0",
+    "nodemon": "^3.0.1"
+  }
+}
